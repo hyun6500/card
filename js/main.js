@@ -1,0 +1,49 @@
+/* ================================================================
+   main.js - 부팅
+   ================================================================ */
+async function boot() {
+  document.getElementById("hello").textContent = S.user.name + "님";
+  document.getElementById("main").innerHTML = '<div class="loading">불러오는 중...</div>';
+  try {
+    await loadAll();
+    render();
+    showVersions();
+  } catch (e) {
+    document.getElementById("main").innerHTML =
+      '<div class="empty">데이터를 불러오지 못했어요.<br>' + esc(e.message) + '</div>';
+  }
+}
+
+function showVersions() {
+  const app = CONFIG.APP_VERSION.replace(/^v/, "");
+  const sv = S.server;
+  const box = document.getElementById("ver");
+  if (!sv) { box.textContent = CONFIG.APP_VERSION; return; }
+  if (sv === app) { box.textContent = CONFIG.APP_VERSION + " (서버 " + sv + ")"; box.classList.remove("bad"); }
+  else {
+    box.textContent = "앱 " + app + " / 서버 " + sv + " 불일치, Apps Script를 새 버전으로 재배포하세요";
+    box.classList.add("bad");
+  }
+}
+
+document.addEventListener("DOMContentLoaded", async () => {
+  document.getElementById("ver").textContent = CONFIG.APP_VERSION;
+  document.querySelectorAll(".tabbar button").forEach(b => {
+    b.onclick = () => {
+      if (S.tab === b.dataset.tab) { window.scrollTo({ top: 0, behavior: "smooth" }); return; }
+      S.tab = b.dataset.tab;
+      render();
+    };
+  });
+  document.getElementById("logout").onclick = () => {
+    if (confirm("로그아웃할까요?")) logout();
+  };
+
+  if (await tryAutoLogin()) {
+    document.getElementById("login").classList.add("hide");
+    document.getElementById("app").classList.remove("hide");
+    await boot();
+  } else {
+    showLogin();
+  }
+});
