@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>카드 캐시백</title>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+  <link rel="stylesheet" href="css/style.css?v=3">
+</head>
+<body>
+
+  <!-- 로그인 -->
+  <div id="login" class="hide">
+    <div class="login-logo">카드 <em>캐시백</em></div>
+    <p class="login-sub">프로모션 조건을 읽고, 자격을 따지고,<br>들어올 돈을 놓치지 않게.</p>
+    <label>아이디<input id="li-id" autocomplete="username"></label>
+    <label>비밀번호<input id="li-pw" type="password" autocomplete="current-password"></label>
+    <div id="li-err"></div>
+    <button class="cta" id="li-btn" style="margin-top:14px">들어가기</button>
+  </div>
+
+  <!-- 앱 본체 -->
+  <div id="app" class="hide">
+    <header>
+      <div class="logo">카드 <em>캐시백</em></div>
+      <span id="hello"></span>
+      <button id="logout" title="로그아웃">⎋</button>
+    </header>
+
+    <main id="main"></main>
+
+    <footer>카드 캐시백 <span id="ver"></span></footer>
+
+    <nav class="tabbar">
+      <button data-tab="cards"><span class="ico">💳</span>내 카드</button>
+      <button data-tab="promo"><span class="ico">🎁</span>프로모션</button>
+      <button data-tab="archive"><span class="ico">📦</span>아카이브</button>
+    </nav>
+  </div>
+
+  <script src="js/config.js?v=3"></script>
+  <script src="js/core.js?v=3"></script>
+  <script src="js/auth.js?v=3"></script>
+  <script src="js/pages.js?v=3"></script>
+  <script src="js/main.js?v=3"></script>
+</body>
+</html>
