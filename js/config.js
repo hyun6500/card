@@ -4,7 +4,7 @@
    [배포, 배포 관리]의 복사 아이콘으로 복사하세요. /exec 로 끝나야 정상.
    ================================================================ */
 const CONFIG = {
-  APPS_SCRIPT_URL: "",   // 예: "https://script.google.com/macros/s/XXXX/exec"
+  APPS_SCRIPT_URL: "https://script.google.com/macros/s/AKfycbwZLoYJAXIs9azntYj2I4T7EoPpWzyK7zlE733_n6g-OdGnBG-NfBY9uvK86ymnjh98/exec",   // 예: "https://script.google.com/macros/s/XXXX/exec"
   APP_VERSION: "v1.10",
   ISSUERS: ["신한", "삼성", "KB국민", "현대", "롯데", "우리", "하나", "BC", "NH농협", "IBK기업"],
   PLATFORMS: ["토스", "네이버페이", "카카오페이", "카드고릴라", "뱅크샐러드", "페이북", "카드사 앱", "기타"],
