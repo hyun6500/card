@@ -4,7 +4,7 @@
    [배포, 배포 관리]의 복사 아이콘으로 복사하세요. /exec 로 끝나야 정상.
    ================================================================ */
 const CONFIG = {
-  APPS_SCRIPT_URL: "",   // 예: "https://script.google.com/macros/s/XXXX/exec"
+  APPS_SCRIPT_URL: "https://script.google.com/macros/s/AKfycbwZLoYJAXIs9azntYj2I4T7EoPpWzyK7zlE733_n6g-OdGnBG-NfBY9uvK86ymnjh98/exec",   // 예: "https://script.google.com/macros/s/XXXX/exec"
   APP_VERSION: "v2.6",
   // Code.gs가 바뀔 때만 올립니다. 화면 파일만 고칠 때는 그대로 둡니다.
   SERVER_EXPECTED: "2.5",
