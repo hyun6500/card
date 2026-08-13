@@ -1,0 +1,36 @@
+/* 약관과 개인정보처리방침 문서 페이지 */
+:root { --ink:#171C24; --sub:#5B6472; --line:#E5E9EF; --bg:#F7F8FA; --blue:#3D6BFF; --amber:#B77400; }
+* { margin:0; padding:0; box-sizing:border-box; }
+body {
+  font-family:"Pretendard Variable",Pretendard,-apple-system,"Apple SD Gothic Neo","Noto Sans KR",sans-serif;
+  background:var(--bg); color:var(--ink); line-height:1.7; font-size:15px;
+}
+.doc { max-width:720px; margin:0 auto; padding:28px 20px 80px; }
+.back { margin-bottom:18px; }
+.back a { color:var(--blue); text-decoration:none; font-size:.88rem; font-weight:700; }
+h1 { font-size:1.5rem; font-weight:900; letter-spacing:-.4px; }
+.meta { color:var(--sub); font-size:.82rem; margin-top:4px; }
+h2 { font-size:1.02rem; font-weight:800; margin:30px 0 8px; padding-top:16px; border-top:1px solid var(--line); }
+p { margin:8px 0; font-size:.92rem; }
+ul { margin:8px 0 8px 18px; }
+li { font-size:.92rem; margin:5px 0; }
+b { font-weight:800; }
+a { color:var(--blue); }
+table { width:100%; border-collapse:collapse; margin:12px 0; font-size:.86rem; }
+th, td { border:1px solid var(--line); padding:9px 11px; text-align:left; vertical-align:top; background:#fff; }
+th { background:#EEF1F5; font-weight:800; white-space:nowrap; }
+.callout { background:#EDF1FF; border-radius:14px; padding:16px 18px; margin:20px 0; }
+.callout.warn { background:#FFF4DE; }
+.callout b { display:block; margin-bottom:6px; }
+.callout.warn b { color:var(--amber); }
+.callout ul { margin-bottom:0; }
+.contact { background:#fff; border:1px solid var(--line); border-radius:10px; padding:11px 13px; }
+table td:first-child, table th:first-child { white-space:nowrap; width:1%; }
+@media (max-width:560px) {
+  table { display:block; }
+  table tr { display:block; border:1px solid var(--line); border-radius:10px; background:#fff; margin-bottom:8px; padding:10px 12px; }
+  table th, table td { display:block; border:0; padding:2px 0; background:none; font-size:.85rem; }
+  table tr:first-child { display:none; }
+  table td:first-child { font-weight:800; color:var(--ink); margin-bottom:2px; }
+  table td:not(:first-child) { color:var(--sub); }
+}
